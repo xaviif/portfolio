@@ -79,7 +79,7 @@
       display: flex;
       width: 100%; }
     #body #technicalcont #picright {
-      background-image: url("../../docs/assets/img/nysky.jpg");
+      background-image: url("https://raw.githubusercontent.com/xaviif/portfolio/main/docs/assets/img/nysky.jpg");
       flex: 2;
       background-attachment: fixed;
       background-size: contain; }
