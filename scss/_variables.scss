@@ -1,0 +1,16 @@
+@font-face{
+  font-family: "Playfair Display";
+  src: url("../../public/assets/fonts/PlayfairDisplay-VariableFont_wght.ttf") format('truetype');
+}
+@font-face{
+  font-family: "Montserrat";
+  src: url("../../public/assets/fonts/Montserrat-Regular.ttf") format('truetype');
+}
+
+@font-face{
+  font-family: "Lato";
+  src: url("../../public/assets/fonts/Lato-Regular.ttf") format('truetype');
+}
+
+$introPicOuterPadding: 7vw;
+$introPicMarginTop: 8vh;
