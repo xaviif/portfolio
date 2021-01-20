@@ -8,19 +8,23 @@
   font-family: "Lato";
   src: url("../../docs/assets/fonts/Lato-Regular.ttf") format("truetype"); }
 #layernamecont {
-  z-index: -1;
-  top: 0;
-  left: 0;
-  font-family: "Playfair Display";
-  font-size: 2em;
-  position: absolute; }
-  #layernamecont #bknameul li {
-    text-transform: uppercase;
-    padding: 1vw 0 37vh;
-    letter-spacing: 0.12rem;
-    color: silver; }
-  #layernamecont #bknameul li:first-child {
-    letter-spacing: 0.2rem; }
+  display: none; }
+  @media (min-width: 768px) {
+    #layernamecont {
+      display: inherit;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      font-family: "Playfair Display";
+      font-size: 2em;
+      position: absolute; }
+      #layernamecont #bknameul li {
+        text-transform: uppercase;
+        padding: 1vw 0 37vh;
+        letter-spacing: 0.12rem;
+        color: silver; }
+      #layernamecont #bknameul li:first-child {
+        letter-spacing: 0.2rem; } }
 
 .bodywidthlimit {
   max-width: 100%;
@@ -30,6 +34,7 @@
 .headerstyle {
   font-family: 'Source Sans Pro', sans-serif;
   letter-spacing: 0.15rem;
+  /**Turn into variable asap*/
   font-size: 1.75rem;
   padding: 2px;
   text-transform: lowercase; }
@@ -42,56 +47,119 @@
   width: 100%;
   max-height: 100%; }
   #body #introcont {
-    height: 100vh; }
+    background-color: #795c50;
+    color: white; }
+    @media (min-width: 768px) {
+      #body #introcont {
+        height: 100vh;
+        background: none;
+        color: black; } }
     #body #introcont #mecont {
-      margin-top: 8vh;
-      display: flex; }
+      display: flex;
+      flex-flow: column;
+      padding: 5vh 0 10vh 2.5vw; }
+      @media (min-width: 768px) {
+        #body #introcont #mecont {
+          padding: 0 0 0 0;
+          margin-top: 8vh;
+          flex-flow: row; } }
       #body #introcont #mecont h3 {
-        flex: 1; }
+        flex: 1;
+        font-size: 2.5em; }
+        @media (min-width: 768px) {
+          #body #introcont #mecont h3 {
+            font-size: 1.75rem; } }
       #body #introcont #mecont #mecontactcont {
-        padding-left: 50%;
         flex: 0.25;
         display: flex; }
+        @media (min-width: 768px) {
+          #body #introcont #mecont #mecontactcont {
+            padding-left: 50%; } }
         #body #introcont #mecont #mecontactcont li {
-          flex: 1;
+          flex: 0.1;
           display: inline-flex;
-          justify-content: flex-end;
-          align-items: flex-end;
           padding: 2px;
           font-size: 1.4rem; }
+          @media (min-width: 768px) {
+            #body #introcont #mecont #mecontactcont li {
+              flex: 1;
+              justify-content: flex-end;
+              align-items: flex-end; } }
           #body #introcont #mecont #mecontactcont li i {
             cursor: pointer; }
     #body #introcont #rotimgdiv {
-      background-color: red;
-      max-width: 100vw;
-      height: calc(100vh - 24vh);
-      display: flex;
-      justify-content: center;
-      overflow: hidden; }
-      #body #introcont #rotimgdiv img {
-        background: white;
-        flex: 1;
-        align-self: center; }
+      display: none; }
+    @media (min-width: 768px) {
+      #body #introcont #rotimgdiv {
+        display: inherit;
+        background-color: red;
+        max-width: 100vw;
+        height: calc(100vh - 24vh);
+        display: flex;
+        justify-content: center;
+        overflow: hidden; }
+        #body #introcont #rotimgdiv img {
+          background: white;
+          flex: 1;
+          align-self: center; } }
   #body #technicalcont {
-    /*this is safe trust me maybe***/
-    margin-top: -5vh; }
+    padding-top: 2.5vh; }
+    @media (min-width: 768px) {
+      #body #technicalcont {
+        /*this is safe trust me maybe***/
+        margin-top: -5vh;
+        padding-top: 0vh; } }
     #body #technicalcont #skillstopaythebillscont {
+      width: 100%;
       display: flex;
-      width: 100%; }
+      flex-direction: column; }
+      @media (min-width: 768px) {
+        #body #technicalcont #skillstopaythebillscont {
+          flex-direction: row;
+          height: 50vh; } }
     #body #technicalcont #picright {
       background-image: url("https://raw.githubusercontent.com/xaviif/portfolio/main/docs/assets/img/nysky.jpg");
-      flex: 2;
-      background-attachment: fixed;
-      background-size: contain; }
+      flex: 1;
+      background-size: cover;
+      max-height: 20%;
+      width: 80%;
+      align-self: center;
+      padding: 2.5vh 1vw;
+      margin: 2.5vh 0;
+      background-attachment: fixed; }
+      @media (min-width: 768px) {
+        #body #technicalcont #picright {
+          align-self: stretch;
+          flex: 2;
+          max-height: 100%;
+          width: 100%; } }
     #body #technicalcont #wordsleft {
       flex: 1; }
       #body #technicalcont #wordsleft p {
         font-size: 1.2em;
-        letter-spacing: 0.1em;
+        letter-spacing: 0.05em;
         word-spacing: 0.1em; }
         #body #technicalcont #wordsleft p:nth-child(2n) {
-          color: #a86d00;
-          padding: 0 0.15em; }
+          color: #66470e;
+          padding: 0 0.05em; }
+  #body #showcasecont {
+    padding-bottom: 15vh; }
+    @media (min-width: 768px) {
+      #body #showcasecont {
+        margin-top: 13vh; } }
+    #body #showcasecont #workcasecont {
+      width: 100%;
+      height: 70vh; }
+      #body #showcasecont #workcasecont .workcase {
+        padding: 5vh 0;
+        display: flex; }
+        #body #showcasecont #workcasecont .workcase .workcaseimg {
+          flex: 1; }
+        #body #showcasecont #workcasecont .workcase .wcbody {
+          flex: 1; }
+  #body #foot {
+    height: 72vh;
+    background: #462e2e; }
 
 * {
   padding: 0;

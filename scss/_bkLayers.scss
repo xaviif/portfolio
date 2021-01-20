@@ -1,18 +1,22 @@
 #layernamecont{
-  z-index: -1;
-  top: 0; left: 0;
-  font-family: "Playfair Display";
-  font-size: 2em;
-  position: absolute;
-  #bknameul{
-    li{
-      text-transform: uppercase;
-      padding: 1vw 0 37vh;
-      letter-spacing: 0.12rem;
-      color: rgb(192, 192, 192);
-    }
-    li:first-child{
-      letter-spacing: 0.2rem;
+  display: none;
+  @media (min-width: 768px) {
+    display: inherit;
+    z-index: -1;
+    top: 0; left: 0;
+    font-family: "Playfair Display";
+    font-size: 2em;
+    position: absolute;
+    #bknameul{
+      li{
+        text-transform: uppercase;
+        padding: 1vw 0 37vh;
+        letter-spacing: 0.12rem;
+        color: rgb(192, 192, 192);
+      }
+      li:first-child{
+        letter-spacing: 0.2rem;
+      }
     }
   }
 }
