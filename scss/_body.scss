@@ -30,12 +30,10 @@
       display: flex;
       flex-flow: column;
       padding: 5vh 0 10vh 2.5vw;
-      text-align: right;
       @media (min-width: 768px) {
         padding: 0 0 0 0;
         margin-top:$introPicMarginTop;
         flex-flow: row;
-        text-align: left;
       }
       h3{
         flex: 1;
@@ -116,12 +114,13 @@
       background-image: url("https://raw.githubusercontent.com/xaviif/portfolio/main/docs/assets/img/nysky.jpg");
       flex: 1;
       background-size: cover;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
       max-height: 30%;
       width: 80%;
       align-self: center;
       padding: 3.5vh 1vw;
       margin: 5vh 0;
-      background-attachment: fixed;
       @media (min-width: 768px) {
         align-self: stretch;
         flex: 2;
@@ -155,6 +154,7 @@
         display: flex;
         flex-flow: row-reverse;
         .workcaseimg{
+          background-color: red;
           flex:1;
         }
         .wcbody{
