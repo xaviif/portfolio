@@ -47,3 +47,15 @@ document.querySelectorAll('.titlecont').forEach(div => {
 });
 
 handlerArray.forEach(el => $(window).on('DOMContentLoaded load resize scroll', el));
+
+const checkpoint = 300;
+ 
+document.querySelector(".workcase").addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll <= checkpoint) {
+    opacity = 1 - currentScroll / checkpoint;
+  } else {
+    opacity = 0;
+  }
+  document.querySelector(".workcase").style.opacity = opacity;
+});

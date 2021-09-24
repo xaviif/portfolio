@@ -14,17 +14,19 @@
       display: inherit;
       z-index: -1;
       top: 0;
-      left: 0;
+      left: 5px;
       font-family: "Playfair Display";
-      font-size: 2em;
+      font-size: 36.66em;
       position: absolute; }
-      #layernamecont #bknameul li {
-        text-transform: uppercase;
-        padding: 1vw 0 37vh;
-        letter-spacing: 0.12rem;
-        color: #f3efef; }
-      #layernamecont #bknameul li:first-child {
-        letter-spacing: 0.2rem; } }
+      #layernamecont #bknameul {
+        display: none;
+        list-style: inside square; }
+        #layernamecont #bknameul li {
+          padding: 0vw 0 0vh;
+          letter-spacing: 0rem;
+          color: #f3efef; }
+        #layernamecont #bknameul li:first-child {
+          letter-spacing: 0.1rem; } }
 
 .bodywidthlimit {
   max-width: 100%;
@@ -36,15 +38,12 @@
   letter-spacing: 0.15rem;
   /**Turn into variable asap*/
   font-size: 1.75rem;
-  padding: 2px;
   text-transform: lowercase; }
 
 .subheaderstyle::before {
   content: "|"; }
 
 .titlecont {
-  position: sticky;
-  top: -2px;
   padding: 1em 0 1em 0;
   transition: 0.2s;
   background: white; }
@@ -55,6 +54,13 @@
 #body {
   max-width: 100%;
   width: 100%; }
+  #body .parallaxSection {
+    background-image: url("../../docs/assets/img/nysky.jpg");
+    height: 35vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
   #body #introcont {
     background-color: #795c50;
     color: white; }
@@ -95,6 +101,14 @@
               flex: 1;
               justify-content: flex-end;
               align-items: flex-end; } }
+          #body #introcont #mecont #mecontactcont li a {
+            transition: 0.44s all; }
+            #body #introcont #mecont #mecontactcont li a:visited {
+              color: black; }
+            #body #introcont #mecont #mecontactcont li a:hover {
+              color: #4d4e53;
+              font-size: 96%;
+              transition: 0.1s all; }
           #body #introcont #mecont #mecontactcont li i {
             cursor: pointer; }
     #body #introcont #rotimgdiv {
@@ -156,41 +170,81 @@
         #body #technicalcont #wordsleft p:nth-child(2n) {
           color: #66470e;
           padding: 0 0.05em; }
-  #body #showcasecont {
-    padding-bottom: 15vh; }
-    @media (min-width: 768px) {
-      #body #showcasecont {
-        margin-top: 8vh; } }
-    #body #showcasecont #workcasecont {
-      margin-top: 8vh;
-      width: 100%; }
-      #body #showcasecont #workcasecont .workcase {
-        padding: 1em 0;
-        font-family: "Montserrat"; }
-        #body #showcasecont #workcasecont .workcase .workcaseimg {
-          background-color: red;
-          flex: 1; }
-        #body #showcasecont #workcasecont .workcase .wcheader {
-          background: #e9e3d9;
-          font-family: "Lato";
-          font-size: 1.35em;
-          padding: 8vh 0 8vh 0; }
-          #body #showcasecont #workcasecont .workcase .wcheader h3 #timeframe {
-            padding: 0 0.5em;
-            font-size: 1.15rem; }
-          #body #showcasecont #workcasecont .workcase .wcheader div {
-            font-size: 1.15rem; }
-        #body #showcasecont #workcasecont .workcase .wcbody {
-          flex: 1; }
-          #body #showcasecont #workcasecont .workcase .wcbody ul {
-            max-width: 100%;
-            display: flex; }
-            #body #showcasecont #workcasecont .workcase .wcbody ul li {
-              text-decoration: none;
-              list-style: none; }
+  @media (min-width: 768px) {
+    #body #showcasecont {
+      margin-top: 8vh; } }
+  #body #showcasecont #workcasecont {
+    width: 100%;
+    display: flex;
+    flex-flow: column; }
+    #body #showcasecont #workcasecont .workcase {
+      margin: 0vh 0 15vh 0;
+      max-width: 100%;
+      display: flex;
+      flex-flow: column; }
+      #body #showcasecont #workcasecont .workcase .wkHeaderCont {
+        border-bottom: 2.5px solid rgba(209, 207, 207, 0.6);
+        width: 100%;
+        font-family: "Montserrat";
+        flex: 0.45;
+        display: inline; }
+        #body #showcasecont #workcasecont .workcase .wkHeaderCont span {
+          padding-left: 5px;
+          height: 100%;
+          display: inline-flex;
+          flex-flow: column;
+          justify-content: flex-end; }
+          #body #showcasecont #workcasecont .workcase .wkHeaderCont span h2 {
+            font-size: 2.55em; }
+          #body #showcasecont #workcasecont .workcase .wkHeaderCont span h5 {
+            font-size: 1.45em;
+            color: #695757; }
+      #body #showcasecont #workcasecont .workcase .wkBodyCont {
+        padding: 5vh 0;
+        background-color: rgba(248, 246, 246, 0.655);
+        font-family: "Lato";
+        flex: 1.5;
+        font-size: 1.15em;
+        padding-left: 2em;
+        padding-top: 0.5em; }
+        #body #showcasecont #workcasecont .workcase .wkBodyCont ul {
+          padding-left: 1em;
+          list-style: inside; }
+  #body #projectshowcasecont .projectsCont {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-flow: wrap-reverse; }
+    #body #projectshowcasecont .projectsCont .projectCont {
+      flex: 1 0 20%;
+      margin-right: 2vh;
+      margin-bottom: 2vh;
+      height: 55.55vh;
+      background: red; }
+      #body #projectshowcasecont .projectsCont .projectCont:first-child {
+        flex: 1 0 40%; }
   #body #foot {
-    height: 72vh;
-    background: #462e2e; }
+    background-color: rgba(248, 246, 246, 0.655);
+    border-top: 1px solid rgba(209, 207, 207, 0.745);
+    font-family: "Montserrat"; }
+    #body #foot #bodyContactme {
+      max-width: 100%;
+      padding-bottom: 10vh; }
+      #body #foot #bodyContactme ul {
+        max-width: 80%;
+        display: flex;
+        margin-left: 10%; }
+        #body #foot #bodyContactme ul li {
+          flex: 1 0 25%;
+          text-align: center;
+          list-style-type: none; }
+      #body #foot #bodyContactme #secondLvl li {
+        text-align: left;
+        padding-right: 10%; }
+        #body #foot #bodyContactme #secondLvl li:first-child {
+          text-align: right;
+          padding-left: 10%; }
 
 * {
   padding: 0;

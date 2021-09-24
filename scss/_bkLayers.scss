@@ -3,19 +3,20 @@
   @media (min-width: 768px) {
     display: inherit;
     z-index: -1;
-    top: 0; left: 0;
+    top: 0; left: 5px;
     font-family: "Playfair Display";
-    font-size: 2em;
+    font-size: 36.66em;
     position: absolute;
     #bknameul{
+      display: none;
+      list-style: inside square;
       li{
-        text-transform: uppercase;
-        padding: 1vw 0 37vh;
-        letter-spacing: 0.12rem;
+        padding: 0vw 0 0vh;
+        letter-spacing: 0rem;
         color: rgb(243, 239, 239);
       }
       li:first-child{
-        letter-spacing: 0.2rem;
+        letter-spacing: 0.1rem;
       }
     }
   }
