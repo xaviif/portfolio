@@ -1,7 +1,7 @@
 /*\/
  **https://stackoverflow.com/a/56678169
  **https://stackoverflow.com/a/7557433
-/**/
+/*
 function onVisibilityChange(el, callback) {
   var old_visible;
   return function () {
@@ -23,8 +23,8 @@ function isElementInViewport (el) {
   return (
       rect.top >= 0 &&
       rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /* or $(window).height() */
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth) /* or $(window).width() */
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && /* or $(window).height() 
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth) /* or $(window).width() 
   );
 }
 
@@ -58,4 +58,30 @@ document.querySelector(".workcase").addEventListener("scroll", () => {
     opacity = 0;
   }
   document.querySelector(".workcase").style.opacity = opacity;
+});*/
+let yvalue;
+var body = document.body,
+    html = document.documentElement;
+
+var winHeight = Math.max( body.scrollHeight, body.offsetHeight, 
+                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+document.addEventListener('scroll', function(e){
+  var scrolltotop = document.scrollingElement.scrollTop;
+  var targets = document.getElementsByClassName("bkImgPar");
+  var xvalue = "center";
+  var factor = 0.05;
+  let offsetTops = [];
+  console.log(targets)
+  for(let i in targets){
+    if(i=="length"){return}
+    offsetTops[i] = targets[i].getBoundingClientRect().top;
+    yvalue = (15) - (offsetTops[i] * 1.5) * factor;
+    if(yvalue >= 0){
+      targets[i].style.backgroundPosition = xvalue + " " + yvalue + "%";
+    }else{
+      targets[i].style.backgroundPosition = xvalue + " " + 0 + "%";
+    
+
+    }
+    }
 });

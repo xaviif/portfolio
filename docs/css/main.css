@@ -102,6 +102,7 @@
               justify-content: flex-end;
               align-items: flex-end; } }
           #body #introcont #mecont #mecontactcont li a {
+            color: black;
             transition: 0.44s all; }
             #body #introcont #mecont #mecontactcont li a:visited {
               color: black; }
@@ -220,10 +221,34 @@
       flex: 1 0 20%;
       margin-right: 2vh;
       margin-bottom: 2vh;
-      height: 55.55vh;
-      background: red; }
+      height: 48.88vh;
+      background: rgba(248, 246, 246, 0.655);
+      display: flex; }
+      #body #projectshowcasecont .projectsCont .projectCont .projTitleCont {
+        flex: 1; }
+      #body #projectshowcasecont .projectsCont .projectCont .proPicCont {
+        flex: 1;
+        height: inherit; }
+        #body #projectshowcasecont .projectsCont .projectCont .proPicCont:hover {
+          transform: scale(1.01, 1.01); }
+      #body #projectshowcasecont .projectsCont .projectCont #DecryptToolParallax {
+        background-image: url("../../docs/assets/img/elmfoodSite.png");
+        background-position: top center;
+        background-attachment: scroll;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%; }
+      #body #projectshowcasecont .projectsCont .projectCont #ElmFoodParallax {
+        background-image: url("../../docs/assets/img/elmfoodSite.png");
+        background-position: top center;
+        background-attachment: scroll;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%; }
       #body #projectshowcasecont .projectsCont .projectCont:first-child {
         flex: 1 0 40%; }
+      #body #projectshowcasecont .projectsCont .projectCont:last-child .projTitleCont {
+        flex: 0.5; }
   #body #foot {
     background-color: rgba(248, 246, 246, 0.655);
     border-top: 1px solid rgba(209, 207, 207, 0.745);

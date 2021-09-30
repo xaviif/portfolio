@@ -79,6 +79,7 @@
             align-items: flex-end;
           }
           a{
+            color: black;
             transition: 0.44s all;
             &:visited{
               color: black;
@@ -233,11 +234,46 @@
         flex:1 0 20%;
         margin-right: 2vh;
         margin-bottom: 2vh;
-        height: 55.55vh;
-        background: red;
+        height: 48.88vh;
+        background: rgba(248, 246, 246, 0.655);
+        display: flex;
+        .projTitleCont{
+          flex: 1;
+          
+        }
+        .proPicCont{
+          flex: 1;
+          height: inherit;
+          &:hover{
+            transform: scale(1.01,1.01); 
+          }
+        }
+        #DecryptToolParallax{
+          background-image: url("../../docs/assets/img/elmfoodSite.png");
+          background-position:top center;
+          background-attachment: scroll;
+          background-size: cover;
+          background-repeat: no-repeat;
+          height: 100%;
+
+        }
+        #ElmFoodParallax{
+          background-image: url("../../docs/assets/img/elmfoodSite.png");
+          background-position:top center;
+          background-attachment: scroll;
+          background-size: cover;
+          background-repeat: no-repeat;
+          height: 100%;
+          
+        }
+        
         &:first-child{
           flex:1 0 40%;
-
+        }
+        &:last-child{
+          .projTitleCont{
+            flex: 0.5;
+          }
         }
       }
       
