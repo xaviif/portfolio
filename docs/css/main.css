@@ -58,6 +58,7 @@
 .titlecont {
   padding: 1em 0 1em 0;
   transition: 0.2s;
+  flex: 0 0 100%;
 }
 
 .titlecont[stuck] {
@@ -272,15 +273,15 @@
   padding-left: 1em;
   list-style: inside;
 }
-#body #projectshowcasecont {
-  margin: 4vh 0;
-}
 #body #projectshowcasecont .projectsCont {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
   justify-content: flex-start;
   flex-flow: wrap-reverse;
+}
+#body #projectshowcasecont .projectsCont .titlecont {
+  margin-top: 4vh;
 }
 #body #projectshowcasecont .projectsCont .projectCont {
   font-family: monospace;

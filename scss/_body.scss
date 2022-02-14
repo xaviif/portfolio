@@ -19,6 +19,7 @@
   //position: sticky; top: -2px;
   padding:1em 0 1em 0;
   transition: 0.2s;
+  flex: 0 0 100%;
 }
 .titlecont[stuck] {
   background: white;
@@ -216,13 +217,15 @@
   }
   #projectshowcasecont{
     
-    margin: $introPicMarginTop 0;
     .projectsCont{
       display: flex;
       width: 100%;
       flex-wrap: wrap;
       justify-content: flex-start;
       flex-flow: wrap-reverse;
+      .titlecont{
+        margin-top: $introPicMarginTop;
+      }
       .projectCont{
         font-family: monospace;
         flex:1 0 20%;
@@ -231,6 +234,7 @@
         height: 48.88vh;
         display: flex;
         overflow: hidden;
+        
         &#IntroCardCont{
           flex-direction: row-reverse;
           .projTitleCont{
