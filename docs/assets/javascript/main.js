@@ -59,6 +59,7 @@ document.querySelector(".workcase").addEventListener("scroll", () => {
   }
   document.querySelector(".workcase").style.opacity = opacity;
 });*/
+console.log("2")
 let yvalue;
 var body = document.body,
     html = document.documentElement;
