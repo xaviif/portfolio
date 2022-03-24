@@ -19,13 +19,13 @@ public class ServerExample {
 
 		//Server Webpage
 		String cssFile = Input.readFile("../public/css/main.css");
-		server.createContext("/myPage/css/main.css", new RouteHandler(cssFile));
+		server.createContext("/home/css/main.css", new RouteHandler(cssFile));
 
         String fontFile = Input.readFile("../public/assets/fonts/Lato-Regular.ttf");
-		server.createContext("/myPage", new RouteHandler(htmlFile));
+		server.createContext("/home", new RouteHandler(htmlFile));
 
 		String htmlFile = Input.readFile("index.htm");
-		server.createContext("/myPage", new RouteHandler(htmlFile));
+		server.createContext("/home", new RouteHandler(htmlFile));
 		
         server.start(); 
 		
