@@ -59,7 +59,6 @@ document.querySelector(".workcase").addEventListener("scroll", () => {
   }
   document.querySelector(".workcase").style.opacity = opacity;
 });*/
-console.log("2")
 let yvalue;
 var body = document.body,
     html = document.documentElement;
@@ -68,21 +67,19 @@ var winHeight = Math.max( body.scrollHeight, body.offsetHeight,
                        html.clientHeight, html.scrollHeight, html.offsetHeight );
 document.addEventListener('scroll', function(e){
   var scrolltotop = document.scrollingElement.scrollTop;
-  var targets = document.getElementsByClassName("bkImgPar");
+  let target = document.getElementById("ElmFoodParallax");
   var xvalue = "center";
   var factor = 0.05;
   let offsetTops = [];
-  console.log(targets)
-  for(let i in targets){
-    if(i=="length"){return}
-    offsetTops[i] = targets[i].getBoundingClientRect().top;
-    yvalue = (15) - (offsetTops[i] * 1.5) * factor;
-    if(yvalue >= 0){
-      targets[i].style.backgroundPosition = xvalue + " " + yvalue + "%";
-    }else{
-      targets[i].style.backgroundPosition = xvalue + " " + 0 + "%";
-    
+  console.log(target)
+  
+  offsetTops[0] = target.getBoundingClientRect().top;
+  yvalue = (15) - (offsetTops[0] * 1.5) * factor;
+  if(yvalue >= 0){
+    //target.style.backgroundPosition = xvalue + " " + yvalue + "%";
+  }else{
+    //target.style.backgroundPosition = xvalue + " " + 0 + "%";
+  
 
-    }
-    }
+  }
 });

@@ -27,7 +27,6 @@
 #body{
   background-color: $pageColor;
   .parallaxSection{
-    background-image: url("https://github.com/xaviif/portfolio/blob/main/docs/assets/img/nysky.jpg");
     height: 35vh;
 
     background-attachment: fixed;
@@ -132,7 +131,6 @@
     }
     #picright{
       //background-image: url("../../docs/assets/img/nysky.jpg");
-      background-image: url("https://raw.githubusercontent.com/xaviif/portfolio/main/docs/assets/img/nysky.jpg");
       flex: 1;
       background-size: cover;
       background-position: 50% 50%;
@@ -269,7 +267,6 @@
           height: inherit;
         }
         #DecryptToolParallax{
-          background-image: url("https://github.com/xaviif/portfolio/blob/main/docs/assets/img/elmfoodSite.png");
           background-position:top center;
           background-attachment: scroll;
           background-size: cover;
@@ -278,7 +275,7 @@
 
         }
         #ElmFoodParallax{
-          background-image: url("https://github.com/xaviif/portfolio/blob/main/docs/assets/img/elmfoodSite.png");
+          background-image: url(https://raw.githubusercontent.com/xaviif/portfolio/main/docs/assets/img/elmfaoodSite.png);
           background-position:top center;
           background-attachment: scroll;
           background-size: cover;
@@ -286,10 +283,9 @@
           height: 100%;
           scale: 1.1;
           
+          
         }
         #SmileFaceParallax{
-
-          background-image: url("../../docs/assets/img/proFile.jpeg");
           background-position:top center;
           background-attachment: scroll;
           background-size: cover;
