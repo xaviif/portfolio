@@ -76,9 +76,9 @@ document.addEventListener('scroll', function(e){
   offsetTops[0] = target.getBoundingClientRect().top;
   yvalue = (15) - (offsetTops[0] * 1.5) * factor;
   if(yvalue >= 0){
-    //target.style.backgroundPosition = xvalue + " " + yvalue + "%";
+    target.style.backgroundPosition = xvalue + " " + yvalue + "%";
   }else{
-    //target.style.backgroundPosition = xvalue + " " + 0 + "%";
+    target.style.backgroundPosition = xvalue + " " + 0 + "%";
   
 
   }
