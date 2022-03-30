@@ -187,6 +187,7 @@
   }
 }
 #body #technicalcont #picright {
+  background-image: url("https://raw.githubusercontent.com/xaviif/portfolio/main/docs/assets/img/nysky.jpg");
   flex: 1;
   background-size: cover;
   background-position: 50% 50%;
