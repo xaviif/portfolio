@@ -357,27 +357,42 @@
   border-top: 1px solid rgba(209, 207, 207, 0.745);
   font-family: "Montserrat";
 }
-#body #foot #bodyContactme {
-  max-width: 100%;
-  padding-bottom: 10vh;
+#body #foot #bodyContactmeCont {
+  display: flex;
+  padding: 12vh 4vw;
 }
-#body #foot #bodyContactme ul {
+#body #foot #bodyContactmeCont #socialsCont {
+  flex: 1;
+  max-width: 100%;
+}
+#body #foot #bodyContactmeCont #socialsCont ul {
   max-width: 80%;
   display: flex;
   margin-left: 10%;
 }
-#body #foot #bodyContactme ul li {
+#body #foot #bodyContactmeCont #socialsCont ul li {
   flex: 1 0 25%;
   text-align: center;
   list-style-type: none;
 }
-#body #foot #bodyContactme #secondLvl li {
+#body #foot #bodyContactmeCont #socialsCont #secondLvl li {
   text-align: left;
   padding-right: 10%;
 }
-#body #foot #bodyContactme #secondLvl li:first-child {
+#body #foot #bodyContactmeCont #socialsCont #secondLvl li:first-child {
   text-align: right;
   padding-left: 10%;
+}
+#body #foot #bodyContactmeCont #emailSubmitCont {
+  flex: 1;
+  border-left: 2px solid black;
+  text-align: left;
+  padding-left: 2em;
+}
+#body #foot #footerEndNoteCont {
+  border-top: 1px solid black;
+  width: 90%;
+  height: 20%;
 }
 
 * {

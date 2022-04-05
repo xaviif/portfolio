@@ -66,15 +66,14 @@ var body = document.body,
 var winHeight = Math.max( body.scrollHeight, body.offsetHeight, 
                        html.clientHeight, html.scrollHeight, html.offsetHeight );
 document.addEventListener('scroll', function(e){
-  var scrolltotop = document.scrollingElement.scrollTop;
   let target = document.getElementById("ElmFoodParallax");
   var xvalue = "center";
-  var factor = 0.05;
+  var factor = 0.075;
   let offsetTops = [];
   console.log(target)
   
   offsetTops[0] = target.getBoundingClientRect().top;
-  yvalue = (15) - (offsetTops[0] * 1.5) * factor;
+  yvalue = (65) - (offsetTops[0] * 1.5) * factor;
   if(yvalue >= 0){
     target.style.backgroundPosition = xvalue + " " + yvalue + "%";
   }else{
