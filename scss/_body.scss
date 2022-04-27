@@ -318,9 +318,8 @@
         flex: 1;
         max-width: 100%;
         ul{
-          max-width: 80%; 
+          max-width:95%; 
           display: flex;
-          margin-left: 10%;
           li{
             flex: 1 0 25%;
             text-align: center;
@@ -340,14 +339,14 @@
       }
       #emailSubmitCont{
         flex: 1;
-        border-left: 2px solid black;
+        border-left: 1px solid rgb(212, 211, 211);
         text-align: left;
         padding-left: 2em;
       }
     }
     #footerEndNoteCont{
-      border-top: 1px solid black;
-      width: 90%;height: 20%;
+      border-top: 1px solid rgb(212, 211, 211);;
+      width: 99%;
     }
   }
 }
