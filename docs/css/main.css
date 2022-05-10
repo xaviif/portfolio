@@ -305,11 +305,13 @@
   margin: auto;
 }
 #body #projectshowcasecont .projectsCont .projectCont#IntroCardCont .projTitleCont {
-  margin: auto 5%;
-  padding: 0 5vw;
+  margin: auto;
   flex: 0.5;
+  padding: 0 5vw;
 }
 #body #projectshowcasecont .projectsCont .projectCont#IntroCardCont .projTitleCont #ptc_Header {
+  margin: auto;
+  min-width: 75%;
   font-family: "Montserrat", sans-serif;
   background-color: black;
   padding: 6px 0;
@@ -322,6 +324,10 @@
 }
 #body #projectshowcasecont .projectsCont .projectCont#IntroCardCont .projTitleCont #ptc_Header h5 {
   display: inline;
+}
+#body #projectshowcasecont .projectsCont .projectCont#IntroCardCont .projTitleCont #ptc_Body {
+  margin: auto;
+  min-width: 75%;
 }
 #body #projectshowcasecont .projectsCont .projectCont#IntroCardCont .projTitleCont #ptc_Body p {
   background-color: black;
