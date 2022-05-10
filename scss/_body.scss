@@ -38,7 +38,7 @@
   #introcont{
     overflow: hidden;
     @media (min-width: 768px) {
-      height: 55vh;
+      height: 43vh;
       color: black;
 
     }
@@ -94,6 +94,8 @@
     
     #rotimgdiv{
       display: none;
+      border-radius: 3px;
+      filter: brightness(90%) saturate(105%) blur(0.82px);;
     }
     @media (min-width: 768px) {
       #rotimgdiv{
@@ -226,22 +228,71 @@
       }
       .projectCont{
         font-family: monospace;
-        flex:1 0 20%;
-        margin-right: 2vh;
-        margin-bottom: 2vh;
+        flex:1 0 10%;
+        //margin-right: 22vh;
+        //margin-bottom: 2vh;
+        margin: 2vh 3vw;
         height: 48.88vh;
         display: flex;
         overflow: hidden;
         
         &#IntroCardCont{
+          background-image: url(https://raw.githubusercontent.com/xaviif/portfolio/main/docs/assets/img/nysky.jpg);
+          
+          background-attachment: scroll;
+          background-repeat: repeat;
+          background-size: 270vw;
+          background-position: 49% 78%;
+          color: white;
+          filter: brightness(93%) saturate(100%) blur(0.12px);
           flex-direction: row-reverse;
+          max-width: 100%;
+          margin: auto;
           .projTitleCont{
-            flex: 0.95;
-            padding-left: 1.22em;
+            margin: auto  5%;
+
+            flex: 0.5;
+            #ptc_Header{
+              font-family: "Montserrat", sans-serif;
+              background-color: rgb(0, 0, 0);
+              padding: 6px 0;
+              border-top-left-radius: 4px;
+              border-top-right-radius: 4px;
+              h2{
+                display: inline;
+                padding-left: 7px;
+              }
+              h5{
+                display: inline;
+              }
+            }
+            #ptc_Body{
+              p{
+                //padding-top: 0;
+                background-color: rgb(0, 0, 0);
+                //padding-left: 7px;
+                padding: 0 0 0 7px;
+              }
+              .ptc_Button{
+                background-color: black;
+                padding: 20px 7px; 
+                border-bottom-left-radius: 4px;
+                border-bottom-right-radius: 4px;
+                p{
+                  cursor: pointer;
+                  background-color: rgb(226, 217, 202);
+                  padding: 9px;
+                  width: 15em;
+                  color: black;
+                  border-radius: 1em;
+                }
+              }
+            }
           }
         }
         .projTitleCont{
           flex: 1;
+          min-width: 50%;
           font-size: larger;
           
           display: flex;
@@ -260,6 +311,8 @@
           }
           p{
             padding: 1.5em 0em;
+
+            z-index: 2;
           }
         }
         .proPicCont{
@@ -281,27 +334,25 @@
           background-size: cover;
           background-repeat: no-repeat;
           height: 100%;
-          scale: 1.1;
+          scale: 1.25;
+          z-index: 1;
           
           
         }
         #SmileFaceParallax{
-          background-image: url(https://raw.githubusercontent.com/xaviif/portfolio/main/docs/assets/img/proFile.jpeg);
-          background-position:top center;
+          background-image: url(https://raw.githubusercontent.com/xaviif/portfolio/main/docs/assets/img/nysky.jpg);
           background-attachment: scroll;
-          background-size: cover;
-          background-repeat: no-repeat;
+          background-repeat: repeat;
+          background-size: 240vw;
+          background-position: 40% 69%;
+          
+          filter: brightness(91%) saturate(94%) blur(0.59px);
           height: 100%;
+          flex: 0.5;
+          
+          overflow: hidden;
         }
         
-        &:first-child{
-          flex:1 0 40%;
-        }
-        &:last-child{
-          .projTitleCont{
-            flex: 0.5;
-          }
-        }
       }
       
     }
