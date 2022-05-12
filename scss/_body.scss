@@ -315,8 +315,9 @@
             }
           }
           p{
-            padding: 1.5em 0em;
-
+            padding-top: 0.25em;
+            padding-bottom: 0.5em;
+            background-color: white;
             z-index: 2;
           }
         }
@@ -324,21 +325,11 @@
           flex: 1;
           height: inherit;
         }
-        #DecryptToolParallax{
-          background-position:top center;
-          background-attachment: scroll;
-          background-size: cover;
-          background-repeat: no-repeat;
-          height: 100%;
-
-        }
         #ElmFoodParallax{
           background-image: url(https://raw.githubusercontent.com/xaviif/portfolio/main/docs/assets/img/elmfoodSite.png);
-          background-position:top center;
           background-attachment: scroll;
-          background-size: cover;
+          background-size: 150%;
           background-repeat: no-repeat;
-          height: 100%;
           scale: 1.25;
           z-index: 1;
           
@@ -369,7 +360,10 @@
     font-family: "Montserrat";
     #bodyContactmeCont{
       display: flex;
-      padding: 12vh 4vw;
+      padding: 10vh 2vw;
+      h5{
+        font-size: 1.13rem;
+      }
       #socialsCont{
         flex: 1;
         max-width: 100%;
@@ -397,7 +391,8 @@
         flex: 1;
         border-left: 1px solid rgb(212, 211, 211);
         text-align: left;
-        padding-left: 2em;
+        display: flex;
+        justify-content: center;
       }
     }
     #footerEndNoteCont{

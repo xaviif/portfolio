@@ -10,7 +10,7 @@ var winHeight = Math.max( body.scrollHeight, body.offsetHeight,
                           html.clientHeight, html.scrollHeight, html.offsetHeight );
 document.addEventListener('scroll', function(e){
   let target = document.getElementById("ElmFoodParallax");
-  var xvalue = "center";
+  var xvalue = "0%";
   var factor = 0.075;
   let offsetTops = [];
   
@@ -23,7 +23,7 @@ document.addEventListener('scroll', function(e){
   }
 });
 
-/**Change background attributes based on interval**/
+/**Change background attributes based on intervel**/
 let bkPositionChangeInterval = 300;
 let bkPosPercent = [40, 69];
 let randomTypePromised = 0;

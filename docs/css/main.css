@@ -366,27 +366,20 @@
   object-position: 50% 50%;
 }
 #body #projectshowcasecont .projectsCont .projectCont .projTitleCont p {
-  padding: 1.5em 0em;
+  padding-top: 0.25em;
+  padding-bottom: 0.5em;
+  background-color: white;
   z-index: 2;
 }
 #body #projectshowcasecont .projectsCont .projectCont .proPicCont {
   flex: 1;
   height: inherit;
 }
-#body #projectshowcasecont .projectsCont .projectCont #DecryptToolParallax {
-  background-position: top center;
-  background-attachment: scroll;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100%;
-}
 #body #projectshowcasecont .projectsCont .projectCont #ElmFoodParallax {
   background-image: url(https://raw.githubusercontent.com/xaviif/portfolio/main/docs/assets/img/elmfoodSite.png);
-  background-position: top center;
   background-attachment: scroll;
-  background-size: cover;
+  background-size: 150%;
   background-repeat: no-repeat;
-  height: 100%;
   scale: 1.25;
   z-index: 1;
 }
@@ -408,7 +401,10 @@
 }
 #body #foot #bodyContactmeCont {
   display: flex;
-  padding: 12vh 4vw;
+  padding: 10vh 2vw;
+}
+#body #foot #bodyContactmeCont h5 {
+  font-size: 1.13rem;
 }
 #body #foot #bodyContactmeCont #socialsCont {
   flex: 1;
@@ -435,7 +431,8 @@
   flex: 1;
   border-left: 1px solid #d4d3d3;
   text-align: left;
-  padding-left: 2em;
+  display: flex;
+  justify-content: center;
 }
 #body #foot #footerEndNoteCont {
   border-top: 1px solid #d4d3d3;
