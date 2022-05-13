@@ -301,6 +301,9 @@
   display: flex;
   overflow: hidden;
 }
+#body #projectshowcasecont .projectsCont .projectCont:not(#IntroCardCont) {
+  max-height: 25vh;
+}
 @media (min-width: 768px) {
   #body #projectshowcasecont .projectsCont .projectCont {
     flex: 1 0 10%;

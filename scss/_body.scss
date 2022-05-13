@@ -240,6 +240,10 @@
       .projectCont{
         font-family: monospace;
         flex: 1 0 50%;
+        &:not(#IntroCardCont){
+          max-height: 25vh;
+
+        }
         @media (min-width: 768px) {
           flex:1 0 10%;
         
