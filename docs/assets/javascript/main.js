@@ -23,6 +23,18 @@ document.addEventListener('scroll', function(e){
   }
 });
 
+/**Apply changes if visiting on mobile device */
+$(document).ready(()=>{
+  if ($(window).width() < 960) {
+    console.log(2)
+    let elmMove = $('#IntroCardCont .projTitleCont').detach();
+    let elmCenter = document.createElement("center");
+    $(elmCenter).append(elmMove);
+
+    $('#SmileFaceParallax').append(elmMove);
+ }
+})
+
 /**Change background attributes based on intervel**/
 let bkPositionChangeInterval = 300;
 let bkPosPercent = [40, 69];

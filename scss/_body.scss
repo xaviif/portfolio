@@ -44,15 +44,16 @@
     }
     #mecont{
       display: flex;
-      flex-flow: column;
-      padding: 5vh 0 10vh 2.5vw;
+      flex-flow: row;
+      padding: 2.5vh 0 0.5vh 0vw;
+
       @media (min-width: 768px) {
         padding: $introPicMarginTop 0 0 0;
         flex-flow: row;
       }
       h3{
         flex: 1;
-        font-size: 2.5em;
+        font-size: 1.75em;
         @media (min-width: 768px) {
           font-size: 1.75rem;
         }
@@ -63,19 +64,14 @@
         justify-content: flex-end;
         @media (min-width: 768px) {
           padding-left:50%;
-          justify-content: flex-start;
-        
         }
         li{
-          flex: 0.1;
+          flex: 1;
           display: inline-flex;
-          padding: 2px;
+          padding: 2px 5px;
           font-size: 1.4rem;
-          @media (min-width: 768px) {
-            flex: 1;
-            justify-content: flex-end;
-            align-items: flex-end;
-          }
+          justify-content: flex-end;
+          align-items: flex-end;
           a{
             color: black;
             transition: 0.44s all;
@@ -171,7 +167,12 @@
     #workcasecont{
       width:100%;
       display: flex;
-      flex-flow: row;
+      flex-flow: column;
+
+      @media (min-width: 768px) {
+        flex-flow: row;
+      }
+
       .workcase{
         margin: 0vh 0 0vh 0;
         padding: 0 1em;
@@ -223,12 +224,26 @@
       flex-wrap: wrap;
       justify-content: flex-start;
       flex-flow: wrap-reverse;
+      #DecryptToolCont{
+        opacity: 0;
+        order: -1;
+        height: 2px;
+        @media (min-width: 768px) {
+        
+          order: initial;
+        }
+
+      }
       .titlecont{
         margin-top: $introPicMarginTop;
       }
       .projectCont{
         font-family: monospace;
-        flex:1 0 10%;
+        flex: 1 0 50%;
+        @media (min-width: 768px) {
+          flex:1 0 10%;
+        
+        }
         //margin-right: 22vh;
         //margin-bottom: 2vh;
         margin: 2vh 3vw;
@@ -237,29 +252,45 @@
         overflow: hidden;
         
         &#IntroCardCont{
-          background-image: url(https://raw.githubusercontent.com/xaviif/portfolio/main/docs/assets/img/nysky.jpg);
-          
-          background-attachment: scroll;
-          background-repeat: repeat;
-          background-size: 270vw;
-          background-position: 49% 78%;
           color: white;
           filter: brightness(93%) saturate(100%) blur(0.12px);
-          flex-direction: row-reverse;
-          max-width: 100%;
           margin: auto;
+
+          @media (max-width: 768px) { height: 84vh; }
+
+          @media (min-width: 768px) {
+            background-image: url(https://raw.githubusercontent.com/xaviif/portfolio/main/docs/assets/img/nysky.jpg);
+            
+            background-attachment: scroll;
+            background-repeat: repeat;
+            background-size: 270vw;
+            background-position: 49% 78%;
+            flex-direction: row-reverse;
+            max-width: 100%;
+          }
           .projTitleCont{
             margin: auto;
-            flex: 0.5;
-            padding: 0 5vw;
+            padding: 0 1.75vw;
+            flex: 1;
+            @media (min-width: 768px) {
+              flex: 0.5;
+              padding: 0 5vw;
+            }
+
             #ptc_Header{
-              margin: auto;
-              min-width: 75%;
+              min-width: 95%;
               font-family: "Montserrat", sans-serif;
               background-color: rgb(0, 0, 0);
-              padding: 6px 0;
+              
               border-top-left-radius: 4px;
               border-top-right-radius: 4px;
+              padding: 2.5vh 0;
+              @media (min-width: 768px) {
+                min-width: 75%;
+                margin: auto;
+                padding: 6px 0;
+
+              }
               h2{
                 display: inline;
                 padding-left: 7px;
@@ -269,20 +300,44 @@
               }
             }
             #ptc_Body{
-              margin: auto;
-              min-width: 75%;
-              
+              min-width: 95%;
+
+              @media (min-width: 768px) {
+                min-width: 75%;
+                margin: auto;
+
+              }
               p{
                 //padding-top: 0;
                 background-color: rgb(0, 0, 0);
                 //padding-left: 7px;
-                padding: 0 0 0 7px;
+                padding: 0.25vh 7px;
+                
+                @media (min-width: 768px) {
+                  padding: 0 0 0 7px;
+                
+                }
               }
               .ptc_Button{
                 background-color: black;
-                padding: 20px 7px; 
                 border-bottom-left-radius: 4px;
                 border-bottom-right-radius: 4px;
+                padding: 6vh 7px; 
+                
+                @media (max-width: 768px) {
+                  &{
+                    display: flex;
+                    justify-content: center;
+                    
+                  }
+                }
+                
+                @media (min-width: 768px) {
+                  padding: 20px 7px; 
+                  
+                
+                }
+
                 p{
                   cursor: pointer;
                   background-color: rgb(226, 217, 202);
@@ -290,6 +345,7 @@
                   width: 15em;
                   color: black;
                   border-radius: 1em;
+
                 }
               }
             }
@@ -344,7 +400,13 @@
           
           filter: brightness(91%) saturate(94%) blur(0.59px);
           height: 100%;
-          flex: 0.5;
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          
+          @media (min-width: 768px) {
+            flex: 0.5;
+          }
           
           overflow: hidden;
         }
