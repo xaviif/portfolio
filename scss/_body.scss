@@ -1,15 +1,15 @@
 //Left Right body padding
 .bodywidthlimit{
-  max-width: 100%;
+  max-width: 90%;
   width: calc(100vw - ($introPicOuterPadding * 2));
   padding: 0 $introPicOuterPadding;
 }
 .headerstyle{
   font-family: "Montserrat", sans-serif;
-  letter-spacing: 0.11rem;
+  letter-spacing: 0.2rem;
   /**Turn into variable asap*/
-  font-size: 1.5rem;
-  // padding: 2px;*
+  font-size: 1.35em;
+  padding-bottom: 0.71em;
   text-transform: uppercase;
 }
 .subheaderstyle::before{
@@ -68,19 +68,15 @@
         li{
           flex: 1;
           display: inline-flex;
-          padding: 2px 5px;
-          font-size: 1.4rem;
+          padding: 2px 0.4em;
+          font-size: 2em;
           justify-content: flex-end;
           align-items: flex-end;
           a{
             color: black;
             transition: 0.44s all;
             &:visited{ color: black; }
-            &:hover{
-              color: rgb(77, 78, 83);
-              font-size: 96%;
-              transition: 0.1s all;
-            }
+          
           }
           i{ cursor: pointer; }
         }
@@ -161,22 +157,18 @@
   
   #showcasecont{
     margin: $introPicMarginTop 0;
+    
     @media (min-width: 768px) {
       margin-top: $introPicMarginTop;
     }
     #workcasecont{
-      width:100%;
+      max-width:100vw;
       display: flex;
-      flex-flow: column;
-
-      @media (min-width: 768px) {
-        flex-flow: row;
-      }
-
+      flex-wrap: wrap;
       .workcase{
         margin: 0vh 0 0vh 0;
         padding: 0 1em;
-        max-width: 100%;
+        min-width: 35vw;
         flex: 1;
         display: flex;
         flex-flow: column;
@@ -362,26 +354,32 @@
           flex: 1;
           min-width: 50%;
           font-size: larger;
-          
           display: flex;
           flex-direction: column; 
 
           .projCardImageCont{
+            .GHImg{
+              background-image: url('https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png');
+              background-attachment: scroll;
+              background-size: 15%;
+              background-repeat: repeat;
+              width: 100%;
+              height: 100%;
+            }
             flex: 1;
-            overflow: hidden;
             img{
               overflow: hidden;
               width: 100%;
               height: 100%;
               object-fit: cover;
               object-position: 50% 50%;
+              
             }
           }
           p{
-            padding-top: 0.25em;
+            padding-top: 0.75em;
             padding-bottom: 0.5em;
             background-color: white;
-            z-index: 2;
           }
         }
         .proPicCont{
@@ -393,8 +391,6 @@
           background-attachment: scroll;
           background-size: 150%;
           background-repeat: no-repeat;
-          scale: 1.25;
-          z-index: 1;
           
           
         }
