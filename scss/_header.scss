@@ -1,0 +1,82 @@
+
+#IntroCardCont{
+  max-width: 100vw; max-height: 81vh;
+  color: white;
+  filter: brightness(93%) saturate(90%) blur(0.92px);
+
+  background-image: url(https://raw.githubusercontent.com/xaviif/portfolio/main/docs/assets/img/nysky.jpg);
+  background-attachment: scroll;
+  background-repeat: repeat;
+  background-size: 270vw;
+  background-position: 49% 78%;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+.introTitleCont{
+  max-width: 95%;
+  flex: 1;
+
+  margin: auto;
+  padding: 10vh 1vw;
+  @media (min-width: 768px) {
+    max-width: 100vw;
+    height: 47vh;
+    //padding: 20% 1.75vw;
+    display: flex;
+    align-items: center;
+    padding: 0 5vw;
+
+  }
+
+  #ptc_Header{
+    font-family: "Montserrat", sans-serif;
+    background-color: rgb(0, 0, 0);
+    font-size: 1.28em;
+    padding: 1px 7px;
+    @media (min-width: 768px) {
+
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      padding: 0.52em 8em  0.52em 5px;
+      font-size: 1.22em;
+
+      margin: auto;
+    }
+    
+  }
+}
+#SmileFaceParallax{
+  background-image: url(https://raw.githubusercontent.com/xaviif/portfolio/main/docs/assets/img/nysky.jpg);
+  background-attachment: scroll;
+  background-repeat: repeat;
+  background-size: 240vw;
+  background-position: 40% 69%;
+  filter: brightness(41%) saturate(44%) blur(0.59px);
+  flex: 1 0 10%;
+  height: 65vh;
+  
+  @media (min-width: 768px) {
+    flex: 0.5 0 15%;
+    display: flex;
+    height: auto;
+  }
+  
+  overflow: hidden;
+}
+#rotimgdiv{
+  height: 20vh;
+  img{ object-fit: cover; width: 100%; height: 100%;}
+  @media (min-width: 768px) {
+    flex: 100%;
+    border-radius: 3px;
+    filter: brightness(81%) saturate(74%) blur(0.39px);
+    display: flex;
+    justify-content: center;
+    height: 32vh;
+  }
+}
+@media (min-width: 768px) {
+  #rotimgdiv{
+  }
+}

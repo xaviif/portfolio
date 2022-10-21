@@ -8,26 +8,11 @@ var body = document.body,
 
 var winHeight = Math.max( body.scrollHeight, body.offsetHeight, 
                           html.clientHeight, html.scrollHeight, html.offsetHeight );
-document.addEventListener('scroll', function(e){
-  let target = document.getElementById("ElmFoodParallax");
-  var xvalue = "0%";
-  var factor = 0.075;
-  let offsetTops = [];
-  
-  offsetTops[0] = target.getBoundingClientRect().top;
-  yvalue = (65) - (offsetTops[0] * 1.5) * factor;
-  if(yvalue >= 0){
-    //target.style.backgroundPosition = xvalue + " " + yvalue + "%";
-  }else{
-   // target.style.backgroundPosition = xvalue + " " + 0 + "%";
-  }
-});
-
+                        
 /**Apply changes if visiting on mobile device */
 $(document).ready(()=>{
   if ($(window).width() < 960) {
-    console.log(2)
-    let elmMove = $('#IntroCardCont .projTitleCont').detach();
+    let elmMove = $('#IntroCardCont .introTitleCont').detach();
     let elmCenter = document.createElement("center");
     $(elmCenter).append(elmMove);
 
@@ -58,7 +43,7 @@ let bkPositionChangeFn = ()=>{
       randomTypePromised = 0;
     }
   }
-  console.log(randomTypeOf, randomTypePromised, bkPositionChangeInterval)
   setTimeout(bkPositionChangeFn, bkPositionChangeInterval)
 }
+
 bkPositionChangeFn()

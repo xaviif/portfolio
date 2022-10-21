@@ -10,6 +10,90 @@
   font-family: "Lato";
   src: url("https://cdn.jsdelivr.net/gh/xaviif/portfolio/docs/assets/fonts/Lato-Regular.ttf") format("truetype");
 }
+#IntroCardCont {
+  max-width: 100vw;
+  max-height: 81vh;
+  color: white;
+  filter: brightness(93%) saturate(90%) blur(0.92px);
+  background-image: url(https://raw.githubusercontent.com/xaviif/portfolio/main/docs/assets/img/nysky.jpg);
+  background-attachment: scroll;
+  background-repeat: repeat;
+  background-size: 270vw;
+  background-position: 49% 78%;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.introTitleCont {
+  max-width: 95%;
+  flex: 1;
+  margin: auto;
+  padding: 10vh 1vw;
+}
+@media (min-width: 768px) {
+  .introTitleCont {
+    max-width: 100vw;
+    height: 47vh;
+    display: flex;
+    align-items: center;
+    padding: 0 5vw;
+  }
+}
+.introTitleCont #ptc_Header {
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(0, 0, 0);
+  font-size: 1.28em;
+  padding: 1px 7px;
+}
+@media (min-width: 768px) {
+  .introTitleCont #ptc_Header {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 0.52em 8em 0.52em 5px;
+    font-size: 1.22em;
+    margin: auto;
+  }
+}
+
+#SmileFaceParallax {
+  background-image: url(https://raw.githubusercontent.com/xaviif/portfolio/main/docs/assets/img/nysky.jpg);
+  background-attachment: scroll;
+  background-repeat: repeat;
+  background-size: 240vw;
+  background-position: 40% 69%;
+  filter: brightness(41%) saturate(44%) blur(0.59px);
+  flex: 1 0 10%;
+  height: 65vh;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  #SmileFaceParallax {
+    flex: 0.5 0 15%;
+    display: flex;
+    height: auto;
+  }
+}
+
+#rotimgdiv {
+  height: 20vh;
+}
+#rotimgdiv img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 768px) {
+  #rotimgdiv {
+    flex: 100%;
+    border-radius: 3px;
+    filter: brightness(81%) saturate(74%) blur(0.39px);
+    display: flex;
+    justify-content: center;
+    height: 32vh;
+  }
+}
+
 #layernamecont {
   display: none;
 }
@@ -81,12 +165,6 @@
 #body #introcont {
   overflow: hidden;
 }
-@media (min-width: 768px) {
-  #body #introcont {
-    height: 43vh;
-    color: black;
-  }
-}
 #body #introcont #mecont {
   display: flex;
   flex-flow: row;
@@ -134,24 +212,6 @@
 }
 #body #introcont #mecont #mecontactcont li i {
   cursor: pointer;
-}
-#body #introcont #rotimgdiv {
-  display: none;
-  border-radius: 3px;
-  filter: brightness(90%) saturate(105%) blur(0.82px);
-}
-@media (min-width: 768px) {
-  #body #introcont #rotimgdiv {
-    display: inherit;
-    max-width: 100vw;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-  }
-  #body #introcont #rotimgdiv img {
-    object-fit: cover;
-  }
 }
 #body #technicalcont {
   padding-top: 1.5vh;
@@ -220,8 +280,6 @@
 }
 #body #showcasecont #workcasecont {
   max-width: 100vw;
-  display: flex;
-  flex-wrap: wrap;
 }
 #body #showcasecont #workcasecont .workcase {
   margin: 0vh 0 0vh 0;
@@ -231,9 +289,14 @@
   display: flex;
   flex-flow: column;
 }
+@media (max-height: 1110px) {
+  #body #showcasecont #workcasecont .workcase {
+    padding: 2vh 1vw 5vh 1vw;
+  }
+}
 #body #showcasecont #workcasecont .workcase .wkHeaderCont {
   border-bottom: 2.5px solid rgba(209, 207, 207, 0.6);
-  width: 100%;
+  width: 90%;
   font-family: "Montserrat";
   flex: 0.45;
   display: inline;
@@ -253,23 +316,30 @@
   color: rgb(105, 87, 87);
 }
 #body #showcasecont #workcasecont .workcase .wkBodyCont {
-  padding: 5vh 0;
   font-family: "Lato";
   flex: 1.5;
   font-size: 1.15em;
-  padding-left: 2em;
+  padding-left: 1.5em;
   padding-top: 0.5em;
 }
 #body #showcasecont #workcasecont .workcase .wkBodyCont ul {
-  padding-left: 1em;
+  padding-left: 1.51em;
   list-style: inside;
+}
+@media (min-width: 1110px) {
+  #body #showcasecont #workcasecont {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+#body #projectshowcasecont {
+  margin-top: 10vh;
 }
 #body #projectshowcasecont .projectsCont {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
   justify-content: flex-start;
-  flex-flow: wrap-reverse;
 }
 #body #projectshowcasecont .projectsCont #DecryptToolCont {
   opacity: 0;
@@ -286,7 +356,7 @@
 }
 #body #projectshowcasecont .projectsCont .projectCont {
   font-family: monospace;
-  flex: 1 0 50%;
+  flex: 1 0 100%;
   margin: 2vh 3vw;
   height: 48.88vh;
   display: flex;
@@ -299,99 +369,8 @@
 }
 @media (min-width: 768px) {
   #body #projectshowcasecont .projectsCont .projectCont {
-    flex: 1 0 10%;
+    flex: 0 0 24%;
   }
-}
-#body #projectshowcasecont .projectsCont .projectCont#IntroCardCont {
-  color: white;
-  filter: brightness(93%) saturate(100%) blur(0.12px);
-  margin: auto;
-}
-@media (max-width: 768px) {
-  #body #projectshowcasecont .projectsCont .projectCont#IntroCardCont {
-    height: 84vh;
-  }
-}
-@media (min-width: 768px) {
-  #body #projectshowcasecont .projectsCont .projectCont#IntroCardCont {
-    background-image: url(https://raw.githubusercontent.com/xaviif/portfolio/main/docs/assets/img/nysky.jpg);
-    background-attachment: scroll;
-    background-repeat: repeat;
-    background-size: 270vw;
-    background-position: 49% 78%;
-    flex-direction: row-reverse;
-    max-width: 100%;
-  }
-}
-#body #projectshowcasecont .projectsCont .projectCont#IntroCardCont .projTitleCont {
-  margin: auto;
-  padding: 0 1.75vw;
-  flex: 1;
-}
-@media (min-width: 768px) {
-  #body #projectshowcasecont .projectsCont .projectCont#IntroCardCont .projTitleCont {
-    flex: 0.5;
-    padding: 0 5vw;
-  }
-}
-#body #projectshowcasecont .projectsCont .projectCont#IntroCardCont .projTitleCont #ptc_Header {
-  min-width: 95%;
-  font-family: "Montserrat", sans-serif;
-  background-color: rgb(0, 0, 0);
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  padding: 2.5vh 0;
-}
-@media (min-width: 768px) {
-  #body #projectshowcasecont .projectsCont .projectCont#IntroCardCont .projTitleCont #ptc_Header {
-    min-width: 75%;
-    margin: auto;
-    padding: 6px 0;
-  }
-}
-#body #projectshowcasecont .projectsCont .projectCont#IntroCardCont .projTitleCont #ptc_Header h2 {
-  display: inline;
-  padding-left: 7px;
-}
-#body #projectshowcasecont .projectsCont .projectCont#IntroCardCont .projTitleCont #ptc_Header h5 {
-  display: inline;
-}
-#body #projectshowcasecont .projectsCont .projectCont#IntroCardCont .projTitleCont #ptc_Body {
-  min-width: 95%;
-}
-@media (min-width: 768px) {
-  #body #projectshowcasecont .projectsCont .projectCont#IntroCardCont .projTitleCont #ptc_Body {
-    min-width: 75%;
-    margin: auto;
-  }
-}
-#body #projectshowcasecont .projectsCont .projectCont#IntroCardCont .projTitleCont #ptc_Body p {
-  background-color: rgb(0, 0, 0);
-  padding: 6px 7px;
-}
-@media (min-width: 768px) {
-  #body #projectshowcasecont .projectsCont .projectCont#IntroCardCont .projTitleCont #ptc_Body p {
-    padding: 0 0 6px 7px;
-  }
-}
-#body #projectshowcasecont .projectsCont .projectCont#IntroCardCont .projTitleCont #ptc_Body .ptc_Button {
-  background-color: black;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-@media (max-width: 768px) {
-  #body #projectshowcasecont .projectsCont .projectCont#IntroCardCont .projTitleCont #ptc_Body .ptc_Button {
-    display: flex;
-    justify-content: center;
-  }
-}
-#body #projectshowcasecont .projectsCont .projectCont#IntroCardCont .projTitleCont #ptc_Body .ptc_Button p {
-  cursor: pointer;
-  background-color: rgb(226, 217, 202);
-  padding: 9px;
-  width: 15em;
-  color: black;
-  border-radius: 1em;
 }
 #body #projectshowcasecont .projectsCont .projectCont .projTitleCont {
   flex: 1;
@@ -405,6 +384,14 @@
 }
 #body #projectshowcasecont .projectsCont .projectCont .projTitleCont .projCardImageCont .GHImg {
   background-image: url("https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png");
+  background-attachment: scroll;
+  background-size: 15%;
+  background-repeat: repeat;
+  width: 100%;
+  height: 100%;
+}
+#body #projectshowcasecont .projectsCont .projectCont .projTitleCont .projCardImageCont #nameProjectPic {
+  background-image: url(https://raw.githubusercontent.com/xaviif/portfolio/main/docs/assets/img/nameWebsite.png);
   background-attachment: scroll;
   background-size: 15%;
   background-repeat: repeat;
@@ -432,24 +419,6 @@
   background-attachment: scroll;
   background-size: 150%;
   background-repeat: no-repeat;
-}
-#body #projectshowcasecont .projectsCont .projectCont #SmileFaceParallax {
-  background-image: url(https://raw.githubusercontent.com/xaviif/portfolio/main/docs/assets/img/nysky.jpg);
-  background-attachment: scroll;
-  background-repeat: repeat;
-  background-size: 240vw;
-  background-position: 40% 69%;
-  filter: brightness(91%) saturate(94%) blur(0.59px);
-  height: 100%;
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-}
-@media (min-width: 768px) {
-  #body #projectshowcasecont .projectsCont .projectCont #SmileFaceParallax {
-    flex: 0.5;
-  }
 }
 #body #foot {
   background-color: rgba(248, 246, 246, 0.655);
@@ -502,8 +471,7 @@
 }
 
 body {
-  max-width: 100vw;
-  display: flex;
+  overflow-x: hidden;
 }
 
 /*# sourceMappingURL=main.css.map */
