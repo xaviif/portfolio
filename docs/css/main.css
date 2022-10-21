@@ -10,9 +10,70 @@
   font-family: "Lato";
   src: url("https://cdn.jsdelivr.net/gh/xaviif/portfolio/docs/assets/fonts/Lato-Regular.ttf") format("truetype");
 }
+#introcont {
+  overflow: hidden;
+  display: flex;
+  flex-flow: column-reverse;
+  margin-top: 5vh;
+}
+@media (min-width: 768px) {
+  #introcont {
+    flex-flow: column;
+    margin-top: 0vh;
+  }
+}
+
+#mecont {
+  display: flex;
+  flex-flow: row;
+  padding: 2.5vh 0 0.5vh 0vw;
+}
+@media (min-width: 768px) {
+  #mecont {
+    padding: 6.66vh 0 0 0;
+    flex-flow: row;
+  }
+}
+#mecont h3 {
+  flex: 1;
+  font-size: 1.75em;
+}
+@media (min-width: 768px) {
+  #mecont h3 {
+    font-size: 1.75rem;
+  }
+}
+#mecont #mecontactcont {
+  flex: 0.25;
+  display: flex;
+  justify-content: flex-end;
+}
+@media (min-width: 768px) {
+  #mecont #mecontactcont {
+    padding-left: 50%;
+  }
+}
+#mecont #mecontactcont li {
+  flex: 1;
+  display: inline-flex;
+  padding: 2px 0.4em;
+  font-size: 2em;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+#mecont #mecontactcont li a {
+  color: black;
+  transition: 0.44s all;
+}
+#mecont #mecontactcont li a:visited {
+  color: black;
+}
+#mecont #mecontactcont li i {
+  cursor: pointer;
+}
+
 #IntroCardCont {
   max-width: 100vw;
-  max-height: 81vh;
   color: white;
   filter: brightness(93%) saturate(90%) blur(0.92px);
   background-image: url(https://raw.githubusercontent.com/xaviif/portfolio/main/docs/assets/img/nysky.jpg);
@@ -24,12 +85,17 @@
   flex-flow: row;
   flex-wrap: wrap;
 }
+@media (min-width: 768px) {
+  #IntroCardCont {
+    max-height: 81vh;
+  }
+}
 
 .introTitleCont {
   max-width: 95%;
   flex: 1;
   margin: auto;
-  padding: 10vh 1vw;
+  padding: 25vh 1vw;
 }
 @media (min-width: 768px) {
   .introTitleCont {
@@ -38,6 +104,7 @@
     display: flex;
     align-items: center;
     padding: 0 5vw;
+    padding: 10vh 1vw;
   }
 }
 .introTitleCont #ptc_Header {
@@ -64,7 +131,6 @@
   background-position: 40% 69%;
   filter: brightness(41%) saturate(44%) blur(0.59px);
   flex: 1 0 10%;
-  height: 65vh;
   overflow: hidden;
 }
 @media (min-width: 768px) {
@@ -162,57 +228,6 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-#body #introcont {
-  overflow: hidden;
-}
-#body #introcont #mecont {
-  display: flex;
-  flex-flow: row;
-  padding: 2.5vh 0 0.5vh 0vw;
-}
-@media (min-width: 768px) {
-  #body #introcont #mecont {
-    padding: 6.66vh 0 0 0;
-    flex-flow: row;
-  }
-}
-#body #introcont #mecont h3 {
-  flex: 1;
-  font-size: 1.75em;
-}
-@media (min-width: 768px) {
-  #body #introcont #mecont h3 {
-    font-size: 1.75rem;
-  }
-}
-#body #introcont #mecont #mecontactcont {
-  flex: 0.25;
-  display: flex;
-  justify-content: flex-end;
-}
-@media (min-width: 768px) {
-  #body #introcont #mecont #mecontactcont {
-    padding-left: 50%;
-  }
-}
-#body #introcont #mecont #mecontactcont li {
-  flex: 1;
-  display: inline-flex;
-  padding: 2px 0.4em;
-  font-size: 2em;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
-#body #introcont #mecont #mecontactcont li a {
-  color: black;
-  transition: 0.44s all;
-}
-#body #introcont #mecont #mecontactcont li a:visited {
-  color: black;
-}
-#body #introcont #mecont #mecontactcont li i {
-  cursor: pointer;
-}
 #body #technicalcont {
   padding-top: 1.5vh;
 }
@@ -303,7 +318,6 @@
 }
 #body #showcasecont #workcasecont .workcase .wkHeaderCont span {
   padding-left: 5px;
-  height: 100%;
   display: inline-flex;
   flex-flow: column;
   justify-content: flex-end;
@@ -364,7 +378,7 @@
 }
 @media (max-width: 768px) {
   #body #projectshowcasecont .projectsCont .projectCont:not(#IntroCardCont) {
-    max-height: 25vh;
+    max-height: 55vh;
   }
 }
 @media (min-width: 768px) {
@@ -393,10 +407,12 @@
 #body #projectshowcasecont .projectsCont .projectCont .projTitleCont .projCardImageCont #nameProjectPic {
   background-image: url(https://raw.githubusercontent.com/xaviif/portfolio/main/docs/assets/img/nameWebsite.png);
   background-attachment: scroll;
-  background-size: 15%;
+  background-size: contain;
+  background-position: 50% 70vh;
   background-repeat: repeat;
   width: 100%;
   height: 100%;
+  filter: contrast(120%) grayscale(75%);
 }
 #body #projectshowcasecont .projectsCont .projectCont .projTitleCont .projCardImageCont img {
   overflow: hidden;
