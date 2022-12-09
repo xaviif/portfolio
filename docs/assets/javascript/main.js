@@ -47,3 +47,36 @@ let bkPositionChangeFn = ()=>{
 }
 
 bkPositionChangeFn()
+
+$("#nav li a").on("mouseover",function(){
+  $(this).parent().siblings().each(function(){
+    console.log($(this))
+    $(this).css({
+      color: 'darken(#F0F0F2, 85%)',
+      filter:' blur(' + 0.82 + 'px)' 
+    })
+  })
+})
+$("#nav li a").on("mouseleave",function(){
+  $(this).parent().siblings().each(function(){
+    console.log($(this))
+    $(this).css({
+      color: '#F0F0F2',
+      filter:' blur(' + 0 + 'px)' 
+    })
+  })
+})
+
+$(document).on("scroll", function(e){
+  var sTop = $(window).scrollTop();
+  let opacityVal = 0.05;
+  if (sTop >= ( $(window).height())) {
+    $(".backToTop").css({
+      opacity: `+=${opacityVal}`
+    })
+  } else{
+    $(".backToTop").css({
+      opacity: `-=${opacityVal}`
+    })
+  }
+})

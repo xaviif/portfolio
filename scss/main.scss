@@ -1,7 +1,50 @@
 @import "variables";
 @import "header";
-@import "bkLayers";
 @import "body";
-*{ padding:0;margin:0; }
+*{ padding:0;margin:0; scroll-behavior: smooth;}
 
-body{overflow-x: hidden; }
+body{overflow-x: hidden;}
+
+#navbar{
+  padding: 0 $introPicOuterPadding;
+}
+#nav{
+  background-color: darken(#733E39, 11%);
+  width: 81.5vw;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  filter: brightness(81%) saturate(44%);
+  *{
+    transition: all 0.3s;
+  }
+  li{
+    font-family: "Playfair Display";
+    vertical-align: text-top;
+    padding: 2px 0 14px 0;
+    
+    
+  }
+  li a{
+    padding: 9px 1.2em;
+    font-size: 1.10em;
+    color: #F0F0F2;
+    filter: blur(0.1px);
+  }
+}
+
+.backToTop{
+  opacity: 0;
+  text-decoration: none;
+  background-color: darken(#733E39, 10%);
+  color: #F0F0F2;
+  position: fixed;
+  font-size: 2.5em;
+  right: 10vh; bottom: 2vw;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2em; height: 2em;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}

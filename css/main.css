@@ -383,6 +383,16 @@
   height: 100%;
   filter: contrast(120%) grayscale(75%);
 }
+#body #projectshowcasecont .projectsCont .projectCont .projTitleCont .projCardImageCont #Velvet {
+  background-image: url(https://raw.githubusercontent.com/xaviif/portfolio/main/docs/assets/img/Velvet.png);
+  background-attachment: scroll;
+  background-size: contain;
+  background-position: 50% 70vh;
+  background-repeat: repeat;
+  width: 100%;
+  height: 100%;
+  filter: contrast(120%) grayscale(75%);
+}
 #body #projectshowcasecont .projectsCont .projectCont .projTitleCont .projCardImageCont img {
   overflow: hidden;
   width: 100%;
