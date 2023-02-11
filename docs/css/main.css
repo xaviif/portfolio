@@ -340,6 +340,7 @@
 #body #projectshowcasecont .projectsCont .projectCont {
   font-family: monospace;
   flex: 1 0 100%;
+  position: relative;
   margin: 2vh 3vw;
   height: 48.88vh;
   display: flex;
@@ -383,6 +384,16 @@
   height: 100%;
   filter: contrast(120%) grayscale(75%);
 }
+#body #projectshowcasecont .projectsCont .projectCont .projTitleCont .projCardImageCont #Velvet {
+  background-image: url(https://raw.githubusercontent.com/xaviif/portfolio/main/docs/assets/img/Velvet.png);
+  background-attachment: scroll;
+  background-size: contain;
+  background-position: 50% 70vh;
+  background-repeat: repeat;
+  width: 150%;
+  height: 100%;
+  filter: contrast(130%) grayscale(25%);
+}
 #body #projectshowcasecont .projectsCont .projectCont .projTitleCont .projCardImageCont img {
   overflow: hidden;
   width: 100%;
@@ -394,6 +405,7 @@
   padding-top: 0.75em;
   padding-bottom: 0.5em;
   background-color: white;
+  z-index: 1;
 }
 #body #projectshowcasecont .projectsCont .projectCont .proPicCont {
   flex: 1;
@@ -404,6 +416,39 @@
   background-attachment: scroll;
   background-size: 150%;
   background-repeat: no-repeat;
+}
+#body #projectshowcasecont .projectsCont .projectCont .projDesc {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 65%, rgba(255, 255, 255, 0) 100%);
+  pointer-events: none;
+}
+#body #projectshowcasecont .projectsCont .projectCont .projDesc h4 {
+  text-decoration: underline;
+}
+#body #projectshowcasecont .projectsCont .projectCont .projDesc p::first-letter {
+  content: " ";
+  border-top: 1px solid rgb(41, 39, 39);
+  font-size: 1.15em;
+}
+#body #projectshowcasecont .projectsCont .projectCont .projDesc p {
+  background-color: transparent;
+  padding-left: 2px;
+  max-width: 90%;
+}
+#body #projectshowcasecont .projectsCont .projectCont .projDesc.visible {
+  opacity: 1;
+  transition: all 200ms ease-out;
+  padding: 24px 16px;
+  color: black;
+}
+#body #projectshowcasecont .projectsCont .projectCont .projDesc.invisible {
+  opacity: 0;
+  padding: 20px 0px;
+  transition: all 560ms ease-in;
+  color: white !important;
 }
 #body #foot {
   background-color: rgba(248, 246, 246, 0.655);

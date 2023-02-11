@@ -23,6 +23,7 @@ $(document).ready(()=>{
 /**Change background attributes based on intervel**/
 let bkPositionChangeInterval = 300;
 let bkPosPercent = [40, 69];
+
 let randomTypePromised = 0;
 let randomTypeOf = Math.floor(Math.random()*4)
 let bkPositionChangeFn = ()=>{
@@ -67,6 +68,12 @@ $("#nav li a").on("mouseleave",function(){
   })
 })
 
+$(".projTitleCont").on("mouseenter", function(e){
+  $(this).find(".projDesc").toggleClass("invisible visible")
+})
+$(".projTitleCont").on("mouseleave", function(e){
+  $(this).find(".projDesc").toggleClass("invisible visible")
+})
 $(document).on("scroll", function(e){
   var sTop = $(window).scrollTop();
   let opacityVal = 0.05;

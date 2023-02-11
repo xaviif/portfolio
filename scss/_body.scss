@@ -168,7 +168,8 @@
       .projectCont{
         font-family: monospace;
         flex: 1 0 100%;
-
+        position: relative;
+        
         @media (max-width: 768px) {
           &:not(#IntroCardCont){
             max-height: 55vh;
@@ -220,10 +221,10 @@
               background-size: contain;
               background-position: 50% 70vh;
               background-repeat: repeat;
-              width: 100%;
+              width: 150%;
               height: 100%;
 
-              filter: contrast(120%) grayscale(75%);
+              filter: contrast(130%) grayscale(25%);
 
             }
             flex: 1;
@@ -240,6 +241,7 @@
             padding-top: 0.75em;
             padding-bottom: 0.5em;
             background-color: white;
+            z-index: 1;
           }
         }
         .proPicCont{
@@ -252,11 +254,41 @@
           background-size: 150%;
           background-repeat: no-repeat;
           
-          
         }
-        
+        .projDesc{
+          position: absolute;
+          width: 100%;
+          overflow: hidden;
+          height: 100%;
+          background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 65%, rgba(255, 255, 255, 0) 100%);
+          pointer-events: none;
+          h4{
+            text-decoration: underline;
+          }
+          p::first-letter{
+            content: " ";
+            border-top: 1px solid rgb(41, 39, 39);
+            font-size: 1.15em;
+          }
+          p{
+            background-color: transparent;
+            padding-left: 2px;
+            max-width: 90%;
+          }
+          &.visible{
+            opacity: 1;
+            transition: all 200ms ease-out;
+            padding: 24px 16px;
+            color: black;
+          }
+          &.invisible{
+            opacity: 0;
+            padding: 20px 0px;
+            transition: all 560ms ease-in;
+            color: white !important;
+          }
+        }
       }
-      
     }
   }
 
