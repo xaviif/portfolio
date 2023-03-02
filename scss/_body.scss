@@ -35,7 +35,30 @@
     background-size: cover;
   }
   max-width: 100%;width: 100%;
+  #introduction{
+    position: relative;
+    h2{
+      font-size: 2.3em;
+      font-weight: lighter;
+      font-family: "Montserrat";
+      padding-bottom: 7px;
+    }
+    p{
+      font-family: "Playfair Display";
+      font-size: 1.12em;
+      width: 45%;
+      margin-top: 2px;
 
+    }
+    p::before{
+      content: " \00a0";
+      border-top: 3px solid rgba(88, 79, 79, 0.667);
+      border-radius: 3px;
+      width: 25%;
+      display: block;
+      position: absolute;
+    }
+  }
   #technicalcont{
     padding-top: 1.5vh;
 
@@ -58,7 +81,7 @@
 
     }
     #picright{
-      background-image: url("https://raw.githubusercontent.com/xaviif/portfolio/main/docs/assets/img/nysky.jpg");
+      background-image: url("../assets/img/building.jpeg");
       flex: 1;
       background-size: cover;
       background-position: 50% 50%;
@@ -81,9 +104,11 @@
         font-size: 1.3em;
         letter-spacing: 0.05em;
         word-spacing: 0.1em;
-        &:nth-child(2n){
-          color: rgb(102, 71, 14);
-          padding: 0 0.05em;
+        line-height: 1.25em;
+        color: rgb(102, 71, 14);
+        &:nth-child(n+4){
+          color: rgb(0, 0, 0);
+          padding: 0 1px;
         }
       }
     }
@@ -138,12 +163,12 @@
           }
         }
       }
-
       @media (min-width: 1110px) {
         display: flex;
         flex-wrap: wrap;
       } 
     }
+
   }
   #projectshowcasecont{
     margin-top: 10vh;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Playfair Display";
   src: url("https://cdn.jsdelivr.net/gh/xaviif/portfolio/docs/assets/fonts/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
@@ -16,6 +17,20 @@
   flex-flow: column-reverse;
   margin-top: 5vh;
 }
+#introcont #mecont {
+  position: relative;
+}
+#introcont #mecont .headerstyle {
+  font-family: "Playfair Display";
+  padding: 1px 1em 0 1em !important;
+  font-size: 1.5rem;
+  background-color: #181110;
+  color: rgb(157, 157, 149);
+  position: absolute;
+  bottom: 0;
+  flex: 100%;
+  filter: brightness(95%) saturate(524%) blur(0.93px);
+}
 @media (min-width: 768px) {
   #introcont {
     flex-flow: column;
@@ -24,7 +39,6 @@
 }
 
 #mecont {
-  display: flex;
   flex-flow: row;
   padding: 2.5vh 0 0.5vh 0vw;
 }
@@ -50,7 +64,7 @@
 }
 @media (min-width: 768px) {
   #mecont #mecontactcont {
-    padding-left: 50%;
+    padding-left: 85%;
   }
 }
 #mecont #mecontactcont li {
@@ -105,9 +119,13 @@
 }
 .introTitleCont #ptc_Header {
   font-family: "Montserrat", sans-serif;
-  background-color: rgb(0, 0, 0);
   font-size: 1.28em;
   padding: 1px 7px;
+  width: 70%;
+  height: 70%;
+  background-image: url(https://raw.githubusercontent.com/xaviif/portfolio/main/docs/assets/img/nysky.jpg);
+  background-size: cover;
+  background-position: 60% 50%;
 }
 @media (min-width: 768px) {
   .introTitleCont #ptc_Header {
@@ -149,7 +167,7 @@
   #rotimgdiv {
     flex: 100%;
     border-radius: 3px;
-    filter: brightness(81%) saturate(74%) blur(0.39px);
+    filter: brightness(75%) saturate(54%) blur(0.93px);
     display: flex;
     justify-content: center;
     height: 32vh;
@@ -197,6 +215,29 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+#body #introduction {
+  position: relative;
+}
+#body #introduction h2 {
+  font-size: 2.3em;
+  font-weight: lighter;
+  font-family: "Montserrat";
+  padding-bottom: 7px;
+}
+#body #introduction p {
+  font-family: "Playfair Display";
+  font-size: 1.12em;
+  width: 45%;
+  margin-top: 2px;
+}
+#body #introduction p::before {
+  content: "  ";
+  border-top: 3px solid rgba(88, 79, 79, 0.667);
+  border-radius: 3px;
+  width: 25%;
+  display: block;
+  position: absolute;
+}
 #body #technicalcont {
   padding-top: 1.5vh;
 }
@@ -223,7 +264,7 @@
   }
 }
 #body #technicalcont #picright {
-  background-image: url("https://raw.githubusercontent.com/xaviif/portfolio/main/docs/assets/img/nysky.jpg");
+  background-image: url("../assets/img/building.jpeg");
   flex: 1;
   background-size: cover;
   background-position: 50% 50%;
@@ -249,10 +290,12 @@
   font-size: 1.3em;
   letter-spacing: 0.05em;
   word-spacing: 0.1em;
-}
-#body #technicalcont #wordsleft p:nth-child(2n) {
+  line-height: 1.25em;
   color: rgb(102, 71, 14);
-  padding: 0 0.05em;
+}
+#body #technicalcont #wordsleft p:nth-child(n+4) {
+  color: rgb(0, 0, 0);
+  padding: 0 1px;
 }
 #body #showcasecont {
   margin: 4.56vh 0;

@@ -3,6 +3,21 @@
   display: flex;
   flex-flow: column-reverse;
   margin-top: 5vh;
+  #mecont{
+    position: relative;
+
+    .headerstyle{
+      font-family: "Playfair Display";
+      padding: 1px 1em 0 1em !important;
+      font-size: 1.5rem;
+      background-color: #181110;
+      color:rgb(157, 157, 149);
+      position: absolute;
+      bottom: 0;
+      flex: 100%;
+      filter: brightness(95%) saturate(524%) blur(0.93px);
+    }
+  }
   @media (min-width: 768px) {
     flex-flow: column;
     margin-top: 0vh;
@@ -12,7 +27,6 @@
 
 
 #mecont{
-  display: flex;
   flex-flow: row;
   padding: 2.5vh 0 0.5vh 0vw;
 
@@ -32,7 +46,7 @@
     display: flex;
     justify-content: flex-end;
     @media (min-width: 768px) {
-      padding-left:50%;
+      padding-left:85%;
     }
     li{
       flex: 1;
@@ -90,9 +104,13 @@
 
   #ptc_Header{
     font-family: "Montserrat", sans-serif;
-    background-color: rgb(0, 0, 0);
     font-size: 1.28em;
     padding: 1px 7px;
+    width: 70%;
+    height: 70%;
+    background-image: url(https://raw.githubusercontent.com/xaviif/portfolio/main/docs/assets/img/nysky.jpg);
+    background-size: cover;
+    background-position: 60% 50%;
     @media (min-width: 768px) {
 
       border-top-left-radius: 4px;
@@ -128,7 +146,7 @@
   @media (min-width: 768px) {
     flex: 100%;
     border-radius: 3px;
-    filter: brightness(81%) saturate(74%) blur(0.39px);
+    filter: brightness(75%) saturate(54%) blur(0.93px);
     display: flex;
     justify-content: center;
     height: 32vh;
