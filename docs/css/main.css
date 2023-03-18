@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: "Playfair Display";
   src: url("https://cdn.jsdelivr.net/gh/xaviif/portfolio/docs/assets/fonts/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
@@ -60,11 +59,12 @@
 #mecont #mecontactcont {
   flex: 0.25;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 @media (min-width: 768px) {
   #mecont #mecontactcont {
     padding-left: 85%;
+    justify-content: flex-end;
   }
 }
 #mecont #mecontactcont li {
@@ -72,8 +72,13 @@
   display: inline-flex;
   padding: 2px 0.4em;
   font-size: 2em;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  #mecont #mecontactcont li {
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
 }
 #mecont #mecontactcont li a {
   color: black;
@@ -194,7 +199,7 @@
 }
 
 .titlecont {
-  padding: 1em 0 1em 0;
+  padding: 1rem 0 1rem 0;
   transition: 0.2s;
   flex: 0 0 100%;
 }
@@ -219,24 +224,57 @@
   position: relative;
 }
 #body #introduction h2 {
-  font-size: 2.3em;
-  font-weight: lighter;
-  font-family: "Montserrat";
-  padding-bottom: 7px;
+  font-size: 2.95em;
+  font-family: "Lato";
+}
+#body #introduction > p {
+  padding-top: 0.5em;
 }
 #body #introduction p {
-  font-family: "Playfair Display";
-  font-size: 1.12em;
-  width: 45%;
-  margin-top: 2px;
+  font-size: 1.22em;
 }
-#body #introduction p::before {
-  content: "  ";
-  border-top: 3px solid rgba(88, 79, 79, 0.667);
-  border-radius: 3px;
-  width: 25%;
-  display: block;
+#body #introduction > div:first-of-type {
+  padding-top: 2.75rem;
+}
+@media (max-width: 768px) {
+  #body #introduction #low_pic {
+    flex-flow: column-reverse;
+    padding-top: 7.5vh;
+  }
+}
+#body #introduction > div {
+  width: 100%;
+  font-family: "Playfair Display";
+  display: flex;
+  position: relative;
+}
+@media (max-width: 768px) {
+  #body #introduction > div {
+    flex-flow: column;
+  }
+}
+#body #introduction > div > p {
+  flex: 1;
+  padding-bottom: 1.75em;
+}
+#body #introduction > div > div {
+  flex: 1;
+  background-color: rgb(18, 12, 3);
+  filter: brightness(93%) saturate(90%) blur(0.92px);
+}
+#body #introduction > div > div .intro_picture {
+  background-image: url("../assets/img/building.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 45vh;
+  background-position: center 0;
+}
+#body #introduction > div > div .intro_picture p {
   position: absolute;
+  color: rgb(238, 193, 181);
+  bottom: 0;
+  padding: 0 0 0.25em 0.25em;
+  background-color: black;
 }
 #body #technicalcont {
   padding-top: 1.5vh;
@@ -560,6 +598,11 @@ body {
   list-style: none;
   filter: brightness(81%) saturate(44%);
 }
+@media (max-width: 768px) {
+  #nav {
+    flex-flow: column;
+  }
+}
 #nav * {
   transition: all 0.3s;
 }
@@ -567,6 +610,9 @@ body {
   font-family: "Playfair Display";
   vertical-align: text-top;
   padding: 2px 0 14px 0;
+}
+#nav li:hover {
+  background-color: #7c433d;
 }
 #nav li a {
   padding: 9px 1.2em;

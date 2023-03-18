@@ -17,6 +17,9 @@ $(document).ready(()=>{
     $(elmCenter).append(elmMove);
 
     $('#SmileFaceParallax').append(elmMove);
+
+    let moveContact = $("#mecont").detach();
+    $('#navbar').append(moveContact);
  }
 })
 

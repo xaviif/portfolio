@@ -15,6 +15,9 @@ body{overflow-x: hidden;}
   justify-content: center;
   list-style: none;
   filter: brightness(81%) saturate(44%);
+  @media (max-width: 768px){
+    flex-flow: column;
+  }
   *{
     transition: all 0.3s;
   }
@@ -22,8 +25,11 @@ body{overflow-x: hidden;}
     font-family: "Playfair Display";
     vertical-align: text-top;
     padding: 2px 0 14px 0;
-    
-    
+
+    &:hover{
+      background-color: lighten(#733E39, 2.5%);
+
+    }
   }
   li a{
     padding: 9px 1.2em;

@@ -17,7 +17,7 @@
 }
 .titlecont{
   //position: sticky; top: -2px;
-  padding:1em 0 1em 0;
+  padding:1rem 0 1rem 0;
   transition: 0.2s;
   flex: 0 0 100%;
 }
@@ -38,26 +38,65 @@
   #introduction{
     position: relative;
     h2{
-      font-size: 2.3em;
-      font-weight: lighter;
-      font-family: "Montserrat";
-      padding-bottom: 7px;
+      font-size: 2.95em;
+      font-family: "Lato";
     }
-    p{
-      font-family: "Playfair Display";
-      font-size: 1.12em;
-      width: 45%;
-      margin-top: 2px;
+    &>p{
+      padding-top: 0.5em;
+    }
+    p{ font-size: 1.22em;   }
+    &>div:first-of-type{
+      padding-top: 2.75rem;
+    }
+    @media (max-width: 768px){
+      #low_pic{
+        flex-flow: column-reverse;
+        padding-top: 7.5vh;
+      }
 
     }
-    p::before{
-      content: " \00a0";
-      border-top: 3px solid rgba(88, 79, 79, 0.667);
-      border-radius: 3px;
-      width: 25%;
-      display: block;
-      position: absolute;
+    &>div{
+      width: 100%;
+      font-family: "Playfair Display";
+      display: flex;
+      position: relative;
+      @media (max-width: 768px) { flex-flow: column; }
+      
+      &>p{
+        flex: 1;
+        padding-bottom: 1.75em;
+      }
+      &>div{ 
+        flex: 1;
+        background-color: rgb(18, 12, 3);
+        filter: brightness(93%) saturate(90%) blur(0.92px);
+        .intro_picture{
+          background-image: url("../assets/img/building.jpeg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          height: 45vh;
+          background-position: center 0;
+          p{
+            position: absolute;
+            color: rgb(238, 193, 181);
+            bottom: 0;
+            padding: 0 0 0.25em 0.25em;
+            background-color: black;
+            
+          }
+          
+        }
+      }
+
     }
+    // p::before{
+    //   content: " \00a0";
+    //   border-top: 3px solid rgba(88, 79, 79, 0.667);
+    //   border-radius: 3px;
+    //   width: 25%;
+    //   display: block;
+    //   position: absolute;
+    // }
   }
   #technicalcont{
     padding-top: 1.5vh;
